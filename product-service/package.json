@@ -7,13 +7,12 @@
     "package-build": "sls package",
     "deploy:dev": "sls deploy --stage dev",
     "deploy:prod": "sls deploy --stage prod",
-    "remove:dev-stack": "sls remove --stage dev --region us-east-1",
-    "remove:prod-stack": "sls remove --stage prod --region us-east-1"
+    "remove:dev-stack": "sls remove --stage dev --region eu-central-1",
+    "remove:prod-stack": "sls remove --stage prod --region eu-central-1"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.73",
     "@types/node": "^10.17.56",
-    "@types/pg": "^7.14.11",
     "@types/serverless": "^1.78.23",
     "@types/uuid": "^8.3.0",
     "dotenv": "^8.2.0",
@@ -28,7 +27,6 @@
   "author": "JSCC",
   "license": "MIT",
   "dependencies": {
-    "pg": "^8.6.0",
     "uuid": "^8.3.2",
     "winston": "^3.3.3"
   }
