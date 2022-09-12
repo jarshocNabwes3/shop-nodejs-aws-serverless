@@ -1,4 +1,4 @@
-export { getProductByIdHandler } from './getProductById';
-export { getAllProductsHandler } from './getAllProducts';
+export { getProductsByIdHandler } from './getProductsById';
+export { getProductsListHandler } from './getProductsList';
 export { createProductHandler } from './createProduct';
 

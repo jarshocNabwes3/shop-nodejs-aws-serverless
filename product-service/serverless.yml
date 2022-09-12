@@ -1,12 +1,12 @@
 service: product-service
-frameworkVersion: '2'
+frameworkVersion: '3'
 variablesResolutionMode: 20210219
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs14.x
   stage: ${opt:stage, 'dev'}
-  region: us-east-1
+  region: eu-central-1
   environment:
     ENV_STAGE: ${opt:stage, 'dev'}
     PGHOST: ${self:custom.dotenvVars.PGHOST, env:PGHOST, ''}
@@ -25,8 +25,8 @@ custom:
     dotenvVars: ${file(configs.js)}
 
 functions:
-  getProductById:
-    handler: handler.getProductById
+  getProductsById:
+    handler: handler.getProductsById
     events:
       - http:
           path: products/{productId}
@@ -36,8 +36,8 @@ functions:
             parameters:
               paths:
                 productId: true
-  getAllProducts:
-    handler: handler.getAllProducts
+  getProductsList:
+    handler: handler.getProductsList
     events:
       - http:
           path: products
